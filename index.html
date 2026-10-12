@@ -1452,7 +1452,7 @@ function demoBychok(){if(META.demoB)return;META.demoB=1;
  for(const k in SLOTW)delete SLOTW[k];Object.assign(SLOTW,{'t:cab0':'rubin','t:cab1':'duet','t:b0':'yozh','t:b1':'dvoika','t:b2':'gun4','t:rk0':'rocket'});
  for(const k in WOWN)delete WOWN[k];for(const w of Object.values(SLOTW))WOWN[w]=1;
  Object.assign(AMST,{bul:20,bat:20,rkt:20,saw:20,aps:20});
- delete META.pw;
+ META.pw={p:['duet','gun4'],s:['rubin','dvoika']};
  demoMods(['gur_3','turbo_3','axle_3','cool_3'],['gur_3','turbo_3','axle_3','cool_3']);
  applyBuild(true);try{hudScrap()}catch(e){}
  texts.push({x:P.x,y:P.y,z:6,life:4,max:4,s:S.lang==='en'?'YOU GOT THE "BYCHOK" TRUCK':'ВЫДАН ГРУЗОВИК «БЫЧОК»'});sfx('pick')}

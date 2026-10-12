@@ -1452,6 +1452,7 @@ function demoBychok(){if(META.demoB)return;META.demoB=1;
  for(const k in SLOTW)delete SLOTW[k];Object.assign(SLOTW,{'t:cab0':'rubin','t:cab1':'duet','t:b0':'yozh','t:b1':'dvoika','t:b2':'gun4','t:rk0':'rocket'});
  for(const k in WOWN)delete WOWN[k];for(const w of Object.values(SLOTW))WOWN[w]=1;
  Object.assign(AMST,{bul:20,bat:20,rkt:20,saw:20,aps:20});
+ delete META.pw;
  demoMods(['gur_3','turbo_3','axle_3','cool_3'],['gur_3','turbo_3','axle_3','cool_3']);
  applyBuild(true);try{hudScrap()}catch(e){}
  texts.push({x:P.x,y:P.y,z:6,life:4,max:4,s:S.lang==='en'?'YOU GOT THE "BYCHOK" TRUCK':'ВЫДАН ГРУЗОВИК «БЫЧОК»'});sfx('pick')}
@@ -1463,6 +1464,7 @@ function demoLastochka(){if(META.demoL)return;META.demoL=1;
  for(const k in WOWN)delete WOWN[k];for(const w of Object.values(SLOTW))WOWN[w]=1;
  Object.assign(AMST,{bul:20,bat:20,harp:10,rkt:20,saw:20,gre:20,aps:20});
  demoMods(['snork_3','ecu_3'],['snork_3','ecu_3','gur_3','turbo_3','axle_3','cool_3']);
+ META.pw={p:['mg_twin','kolotushka'],s:['harpoon']};
  applyBuild(true);try{hudScrap()}catch(e){}
  texts.push({x:P.x,y:P.y,z:6,life:4,max:4,s:S.lang==='en'?'YOU GOT THE "LASTOCHKA" VAN':'ВЫДАН ФУРГОН «ЛАСТОЧКА»'});sfx('pick')}
 function demoEnd(){if(document.getElementById('demoend'))return;paused=true;const en=S.lang==='en';const d=document.createElement('div');d.id='demoend';
